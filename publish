@@ -1,0 +1,10 @@
+cd /users/bob/dev/website
+pelican content
+git add .
+git commit -m "publish"
+git push origin master
+cd /users/bob/dev/website/output
+git add .
+git commit -m "publish"
+git push origin gh-pages
+echo "publish -> done"
