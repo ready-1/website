@@ -1,6 +1,6 @@
 # local adds
 python/
-db.sqlite3
+output/
 
 
 

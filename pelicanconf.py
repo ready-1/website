@@ -1,3 +1,5 @@
+from datetime import datetime
+
 AUTHOR = 'Bob King'
 SITENAME = 'Ready-1'
 SITEURL = 'wwww.getready1.com'
@@ -29,7 +31,7 @@ SOCIAL = (
     ("Another social link", "#"),
 )
 
-STATIC_PATHS = ['pdfs', 'images', 'extra']
+STATIC_PATHS = ['pdfs', 'images', 'extras']
 # ARTICLE_PATHS = ['articles']
 
 DEFAULT_PAGINATION = 10
@@ -46,4 +48,4 @@ PAGE_SAVE_AS = '{slug}/index.html'
 THEME = 'themes/pelican-bootstrap-5'
 THEME__BOOTSWATCH = 'litera'
 
-COPYRIGHT_YEAR = '{{ now | strftime("%Y") }}'
+COPYRIGHT_YEAR = datetime.now().year
