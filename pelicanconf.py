@@ -1,6 +1,6 @@
 AUTHOR = 'Bob King'
 SITENAME = 'Ready-1'
-SITEURL = ""
+SITEURL = 'wwww.getready1.com'
 
 PATH = "content"
 
@@ -30,6 +30,7 @@ SOCIAL = (
 )
 
 STATIC_PATHS = ['pdfs', 'images', 'extra']
+# ARTICLE_PATHS = ['articles']
 
 DEFAULT_PAGINATION = 10
 
@@ -37,9 +38,12 @@ PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
 
+
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
 # THEME = "simple"
 THEME = 'themes/pelican-bootstrap-5'
-THEME__BOOTSWATCH = 'slate'
+THEME__BOOTSWATCH = 'litera'
+
+COPYRIGHT_YEAR = '{{ now | strftime("%Y") }}'
