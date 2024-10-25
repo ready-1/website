@@ -31,6 +31,8 @@ SOCIAL = (
     ("Another social link", "#"),
 )
 
+USE_FOLDER_AS_CATEGORY = True
+
 STATIC_PATHS = ['pdfs', 'images', 'extras']
 # ARTICLE_PATHS = ['articles']
 
@@ -38,8 +40,6 @@ DEFAULT_PAGINATION = 10
 
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
-
-
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True

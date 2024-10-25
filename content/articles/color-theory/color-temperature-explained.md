@@ -1,6 +1,7 @@
 Title: The History and Science of Color Temperature
 Date: 10/24/24, 7:41 PM
 Category: Concepts
+tags: color theory, lighting
 og_image: 
 slug: the-history-and-science-of-color-temperature
 
