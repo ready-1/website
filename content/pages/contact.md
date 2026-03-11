@@ -1,12 +1,16 @@
-Title: Contac Us
+Title: Contact Us
 Date: 2024-01-01
 Slug: contact
 Category: Pages
 Author: Ready-1 Event Support
-Summary: Ready-1 Event Support Contact Information.
+Summary: Contact Ready-1 Event Support.
 
 # Get in touch
 
-The easiest way to reach us is via email at [getready1.com](mailto:contact@getready1.com)
+If you need Ready-1 for an upcoming event, the easiest path is email: [contact@getready1.com](mailto:contact@getready1.com)
 
-If you prefer, you can also reach us by phone at +1 813.473.2391.
+You can also call or text: [+1 813.473.2391](tel:+18134732391)
+
+## What to include
+
+A quick note with your event dates, location, and what kind of support you think you need is enough to start the conversation.

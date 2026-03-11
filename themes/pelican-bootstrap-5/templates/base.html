@@ -5,20 +5,13 @@
   </head>
 
   <body>
-    <!-- Navbar -->
     {% include "navbar.html" %}
 
-    <!-- Content -->
-    <div class="container">{% block content %}{% endblock %}</div>
+    <main class="container main-shell">{% block content %}{% endblock %}</main>
 
-    <!-- Footer -->
     {% include "footer.html" %}
 
-    <!-- Bootstrap JS bundle  -->
     <script src="/theme/assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Theme JS -->
     <script src="/theme/assets/js/theme.js"></script>
-    <!-- Theme customizer JS -->
-    <script src="/theme/assets/theme_custom.js"></script>
   </body>
 </html>

@@ -1,72 +1,59 @@
+<meta charset="UTF-8" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
 
+{% set page_title = SITENAME %}
+{% if page and page.title %}
+  {% set page_title = page.title ~ ' | ' ~ SITENAME %}
+{% elif article and article.title %}
+  {% set page_title = article.title ~ ' | ' ~ SITENAME %}
+{% endif %}
 
-    <meta charset="UTF-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+{% set page_description = SITEDESCRIPTION if SITEDESCRIPTION else SITESUBTITLE %}
+{% if page and page.summary %}
+  {% set page_description = page.summary|striptags %}
+{% elif article and article.summary %}
+  {% set page_description = article.summary|striptags %}
+{% endif %}
 
-    <!-- Open Graph data  -->
-    <meta property="og:title" content="{{ SITENAME }}" />
-    <meta property="og:description" content="{{ SITESUBTITLE }}" />
-    <meta property="og:image" content="{{ THEME__OPEN_GRAPH_IMAGE }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ SITEURL }}" />
+{% set canonical_url = SITEURL %}
+{% if output_file %}
+  {% set canonical_url = SITEURL ~ '/' ~ output_file %}
+{% endif %}
 
-    <!-- default FB app id: 966242223397117 -->
-    <meta property="fb:app_id" content="{{ THEME__OPEN_GRAPH_FB_APP_ID }}" />
+<meta name="description" content="{{ page_description }}" />
+<link rel="canonical" href="{{ canonical_url }}" />
 
-    <!-- Bootstrap Icons -->
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      crossorigin
-      href="/theme/assets/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
-    />
-    <link
-      rel="stylesheet"
-      href="/theme/assets/bootstrap-icons/font/bootstrap-icons.css"
-    />
+<meta property="og:title" content="{{ page_title }}" />
+<meta property="og:description" content="{{ page_description }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ canonical_url }}" />
+<meta property="og:site_name" content="{{ SITENAME }}" />
 
-    <!-- Bootstrap CSS  -->
-    {% if THEME__BOOTSWATCH %}
-    <link
-      rel="stylesheet"
-      href="/theme/assets/css/{{ THEME__BOOTSWATCH }}/bootstrap.min.css"
-      type="text/css"
-    />
-    {% else %}
-    <link
-      rel="stylesheet"
-      href="/theme/assets/css/bootstrap.min.css"
-      type="text/css"
-    />
-    {% endif %}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ page_title }}" />
+<meta name="twitter:description" content="{{ page_description }}" />
 
-    <!-- theme CSS -->
-    <link rel="stylesheet" href="/theme/assets/css/theme.css" />
+<link
+  rel="stylesheet"
+  href="/theme/assets/bootstrap-icons/font/bootstrap-icons.css"
+/>
 
-    <!-- theme customization CSS -->
-    <link rel="stylesheet" href="/theme/assets/theme_custom.css" />
+{% if THEME__BOOTSWATCH %}
+<link
+  rel="stylesheet"
+  href="/theme/assets/css/{{ THEME__BOOTSWATCH }}/bootstrap.min.css"
+  type="text/css"
+/>
+{% else %}
+<link
+  rel="stylesheet"
+  href="/theme/assets/css/bootstrap.min.css"
+  type="text/css"
+/>
+{% endif %}
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="ZZZ???resources/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="ZZZ???resources/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="ZZZ???resources/favicon/favicon-16x16.png"
-    />
+<link rel="stylesheet" href="/theme/assets/css/theme.css" />
+<link rel="stylesheet" href="/theme/assets/theme_custom.css" />
 
-    <link rel="manifest" href="site.webmanifest" />
-
-    <title>{% block title %}{% endblock title %}</title>
-  
+<title>{{ page_title }}</title>

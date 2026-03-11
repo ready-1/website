@@ -2,7 +2,9 @@ from datetime import datetime
 
 AUTHOR = 'Bob King'
 SITENAME = 'Ready-1'
-SITEURL = 'wwww.getready1.com'
+SITESUBTITLE = 'Broadcast engineering support for corporate live events'
+SITEDESCRIPTION = 'Ready-1 provides broadcast engineering support for corporate live events, including multi-camera systems, networking and control, signal routing, and image-confidence work.'
+SITEURL = 'https://www.getready1.com'
 
 PATH = "content"
 
@@ -46,6 +48,6 @@ PAGE_SAVE_AS = '{slug}/index.html'
 
 # THEME = "simple"
 THEME = 'themes/pelican-bootstrap-5'
-THEME__BOOTSWATCH = 'litera'
+THEME__BOOTSWATCH = 'darkly'
 
 COPYRIGHT_YEAR = datetime.now().year

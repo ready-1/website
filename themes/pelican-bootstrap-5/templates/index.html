@@ -1,53 +1,122 @@
 {% extends "base.html" %}
 
-{# {% block title %}{{ SITENAME }}{% endblock %} #}
+{% block title %}Ready-1 | Broadcast engineering for live events{% endblock %}
 
 {% block content %}
-
-<div class="container">    
-    <div class="row my-5 min-vh-100">
-
+<section class="hero-shell">
+  <div class="row align-items-center gy-5">
+    <div class="col-lg-7">
+      <div class="hero-kicker">Ready-1 Event Support</div>
+      <h1 class="hero-title">Broadcast engineering for live events that cannot afford surprises.</h1>
+      <p class="hero-copy">Ready-1 supports corporate live events with practical broadcast engineering, multi-camera systems, networking and control, and the kind of calm technical judgment that keeps the room moving when the stakes are real.</p>
+      <div class="hero-actions">
+        <a class="btn btn-lg btn-r1-secondary" href="/about">About Ready-1</a>
+        <a class="btn btn-lg btn-r1-secondary" href="/contact">Contact</a>
+      </div>
+      <div class="row g-3 mt-4">
+        <div class="col-sm-6">
+          <div class="metric-strip">
+            <div class="metric-value">Signal-first</div>
+            <div class="muted">Engineering support shaped by real-world show flow, not theory in a vacuum.</div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="metric-strip">
+            <div class="metric-value">Low-drama</div>
+            <div class="muted">Calm troubleshooting, clean communication, and technical preparation that reduces downstream grief.</div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-
-{#
- <section class="container overflow-hidden py-5">
-    <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3">
-
-        {% for article in articles %}
-
-            <div class="col-xl-3 col-md-4 col-sm-6 overflow-hidden">
-
-                <a href="/{{ article.url }}" class="article-list card border-0 text-white shadow-sm overflow-hidden m-sm-0">
-
-                    {% if article.og_image %}
-                        <img class="card-img" src="/images/{{ article.og_image }}" alt="Card image">
-                    {% else %}
-                        <img class="card-img" src="/images/{{ THEME__OPEN_GRAPH_IMAGE }}" alt="Card image">
-                    {% endif %}
-
-                    <div class="article-list-vertical card-img-overlay d-flex align-items-end ">
-                        <div class="text-left text-light">
-                            <span class="badge badge-xs rounded-pill bg-light text-dark mb-lg-3 px-lg-4 ">
-                                {{ article.category }}
-                            </span>
-
-                            <p class="card-text fs-4">
-                                {{ article.title }}
-                            </p>
-                        </div>
-                    </div>
-
-                </a>
-
-            </div>
-
-        {% else %}
-            No posts yet!
-        {% endfor %} 
-
+    <div class="col-lg-5">
+      <div class="signal-card">
+        <div class="signal-grid" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <h2 class="h4 mb-3">What Ready-1 brings to the room</h2>
+        <ul class="contact-list list-unstyled mb-0">
+          <li><i class="bi bi-camera-video"></i> Multi-camera broadcast systems for corporate live events</li>
+          <li><i class="bi bi-diagram-3"></i> Networking, control, and full-chain signal confidence</li>
+          <li><i class="bi bi-palette2"></i> Practical color-management guidance when image quality matters</li>
+          <li><i class="bi bi-telephone-forward"></i> Direct contact when you need a competent engineering hand on the project</li>
+        </ul>
+      </div>
     </div>
+  </div>
 </section>
-#}
 
+<section class="py-5">
+  <div class="row align-items-start gy-4">
+    <div class="col-lg-5">
+      <div class="eyebrow">What you are actually hiring</div>
+      <h2 class="section-title">A technical partner who thinks past the next cable.</h2>
+      <p class="hero-copy">Ready-1 is built for producers, technical directors, and project managers who need the engineering side of the event to be competent, modern, and unsurprising. The goal is not to look clever. The goal is to make the show work cleanly.</p>
+      <div class="quote-band glass-card mt-4">
+        <strong class="d-block mb-2">Operating principle</strong>
+        <span class="muted">Preparation beats panic. Clear calls beat noise. Competence travels well.</span>
+      </div>
+    </div>
+    <div class="col-lg-7">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="bi bi-broadcast-pin"></i></div>
+            <h3 class="h4">Event broadcast engineering</h3>
+            <p>Support for live event video systems where timing, routing, and signal reliability have to hold under pressure.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="bi bi-hdd-network"></i></div>
+            <h3 class="h4">Networking & control</h3>
+            <p>System thinking across devices, control surfaces, transport, and failure points before they become room problems.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="bi bi-sliders"></i></div>
+            <h3 class="h4">Color & image confidence</h3>
+            <p>A strong eye for color pipeline issues, image consistency, and how lighting and engineering decisions interact.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="bi bi-person-check"></i></div>
+            <h3 class="h4">Senior judgment on site</h3>
+            <p>Decades of field experience translating into fewer surprises, better calls, and calmer escalation when something shifts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="row g-4 align-items-stretch">
+    <div class="col-lg-6">
+      <div class="contact-card glass-card h-100">
+        <div class="eyebrow">Who this is for</div>
+        <h2 class="h3 mb-3">Corporate live events that need solid engineering behind the curtain.</h2>
+        <p class="muted">If you need a broadcast engineer who can support cameras, control, networking, and the ugly little technical details that determine whether a show feels polished or fragile, Ready-1 is built for that lane.</p>
+        <ul class="contact-list list-unstyled mt-4 mb-0">
+          <li><i class="bi bi-check2-circle"></i> Producers who need a reliable engineering hand</li>
+          <li><i class="bi bi-check2-circle"></i> Technical directors who need a partner, not a tourist</li>
+          <li><i class="bi bi-check2-circle"></i> Project managers who want cleaner execution and fewer late surprises</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="contact-card glass-card h-100">
+        <div class="eyebrow">Get in touch</div>
+        <h2 class="h3 mb-3">Need Ready-1 on your next event?</h2>
+        <ul class="contact-list list-unstyled mb-4">
+          <li><i class="bi bi-envelope"></i> <a href="mailto:contact@getready1.com">contact@getready1.com</a></li>
+          <li><i class="bi bi-phone"></i> <a href="tel:+18134732391">+1 813.473.2391</a></li>
+          <li><i class="bi bi-geo-alt"></i> Dade City, Florida — and wherever you are</li>
+        </ul>
+        <a class="btn btn-lg btn-r1-secondary" href="/contact">Contact details</a>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
